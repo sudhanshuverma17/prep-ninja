@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:copy": "react-scripts build && node -e \"const fs=require('fs'); fs.cpSync('./build', '../server/public', {recursive:true, force:true}); console.log('Successfully copied build to server/public');\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
